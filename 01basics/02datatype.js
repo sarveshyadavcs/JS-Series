@@ -14,7 +14,7 @@ console.log(3+2);
 //undefined => Value is not defined/assign
 //symbol => make uniqueness of the variable 
 
-//object =>
+//object => Will cover in next videos
 
 console.log(typeof "ram")
 console.log(typeof null) //object
