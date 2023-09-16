@@ -15,6 +15,7 @@ console.log(3+2);
 //symbol => make uniqueness of the variable 
 
 //object => Will cover in next videos
+//NAN => Number
 
 console.log(typeof "ram")
 console.log(typeof null) //object
