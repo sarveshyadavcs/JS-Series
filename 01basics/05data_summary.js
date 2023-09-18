@@ -50,18 +50,18 @@
 let myName = "SarvUttam";
 let newName = myName; //Copy original value here So that do not change in original value
 newName = "SarvGun"
-console.log(myName);
-console.log(newName); 
+console.log(myName); //SarvUttam
+console.log(newName); //SarvGun 
 
 let myStu = ["ram", "kumar", "yadav"];
 let newStu = myStu; //reference here So that will change in original value
 newStu[0] = "shyam";
-console.log(myStu);
-console.log(newStu);
+console.log(myStu); //[ 'shyam', 'kumar', 'yadav' ]
+console.log(newStu); //[ 'shyam', 'kumar', 'yadav' ]
 
 
 let obj = {name:"Krishna", age:22};
 let newObj = obj;
 newObj.name = "Kanhai";
-console.log(obj);
-console.log(newObj);
+console.log(obj); //{ name: 'Kanhai', age: 22 }
+console.log(newObj); //{ name: 'Kanhai', age: 22 }
