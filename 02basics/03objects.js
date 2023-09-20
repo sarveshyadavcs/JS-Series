@@ -41,6 +41,7 @@ newUser.greeting = function(){
     console.log("Hello user...");
 }
 newUser.greeting(); //Hello user... 
+console.log(newUser.greeting()) //Hello user... & undefined //: because one is coming from between the function and 2nd is the coming form calling the fucntion in console so.   
 //When your object/newUser will be freez then will show below type error
 //TypeError: newUser.greeting is not a function
 console.log(newUser.greeting); //[Function (anonymous)] : this is alerting that some function avaiable here
