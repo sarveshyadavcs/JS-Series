@@ -40,3 +40,26 @@ if (balance > 500) console.log("balance is grater than 500"), // for write multi
 console.log("test");
 
 
+if(balance < 500 ){
+    console.log(`${balance} is less then 500`)
+}else if(balance < 1000){
+    console.log(`${balance} is less then 1000`)
+}else{
+    console.log(`${balance} is grater then or equal to 1000`)
+}
+
+const loggedIn = true;
+const verfiy = true;
+if (loggedIn && verfiy && 5==5){
+    console.log(`user login successfully`)
+}else{
+    console.log(`something is wrong`)
+}
+
+const googleResitration = false;
+const emailResitration = true;
+if (googleResitration || emailResitration || 0<1) {
+    console.log(`Logged in here... you are registerd user`)
+}else{
+    console.log(`please registere first then try to login here`)
+}
