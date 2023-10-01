@@ -15,3 +15,26 @@ if (Object.keys(userObj).length === 0){
 }
 
 //// Nullish coalescing Operater (??) : null undefined
+//// if getting null or undefined with another value then getting anoher value in result
+let val1  = 3 ?? 5;
+console.log(val1); // 3
+let val2  = null ?? 5;
+console.log(val2); // 5
+let val3  = undefined ?? 5;
+console.log(val3); // 5
+let val4  = null ?? undefined;
+console.log(val4); // undefined
+let val5  = null ?? undefined ?? 11;
+console.log(val5); // 11
+
+//// Terniary Operater :> consdition ? true : false
+const val = "";
+if(val){
+    console.log("value is avaiable")
+}
+else{
+    console.log("value is not avaiable")
+}
+
+val?console.log("value is here"):console.log("value is not here");
+
