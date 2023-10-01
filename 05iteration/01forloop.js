@@ -28,3 +28,14 @@ for (let index = 0; index < arr.length; index++) {
     const element = arr[index];
     console.log(element + " " + index);
 }
+
+for (let i = 0; i<=10; i++){
+    const detected = i;
+    if(detected == 5){
+        console.log(`detected ${i} value here`);
+        break; //// O/P: 0 1 2 3 4 detected 5 condiotional value here
+        //continue;  //// O/P: 0 1 2 3 4 detected 5 condiotional value here 6 7 8 9 10 
+    }
+    console.log(i);
+}
+
