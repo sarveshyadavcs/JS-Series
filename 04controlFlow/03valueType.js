@@ -28,7 +28,12 @@ let val5  = null ?? undefined ?? 11;
 console.log(val5); // 11
 
 //// Terniary Operater :> consdition ? true : false
-const val = "";
+// const val = ""; //false
+// const val = null; //false
+// const val = undefined; //false
+// const val = "Ram"; //true
+const val = 10; //true
+
 if(val){
     console.log("value is avaiable")
 }
