@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+</head>
+<body>
+    <ul class="lang">
+        <li>JS</li>
+    </ul>    
+</body>
+<script>
+    function addLang(lang) {
+        const list = document.createElement("li");
+        list.innerHTML = lang;
+        document.querySelector(".lang").
+        appendChild(list);
+    }
+    addLang("Python");
+    addLang("TS");
+
+    function addOptimizeLang(optLnag) {
+        const list = document.createElement('li');
+        list.appendChild(document.createTextNode(optLnag));
+        document.querySelector('.lang').appendChild(list);
+    }
+    addOptimizeLang('Java')
+    addOptimizeLang('C++')
+
+    ////EDIt Value
+    const secondLang = document.querySelector('li:nth-child(2)');
+    //secondLang.innerHTML = "Mojo"
+    secondLang.appendChild(document.createTextNode(" C#"));
+    const newList = document.createElement('li');
+    newList.textContent = "Asp.net"
+    secondLang.replaceWith(newList)
+
+    //Edit another
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.outerHTML = '<li>Angular</li>'
+
+    //remove
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.remove();
+</script>
+</html>
