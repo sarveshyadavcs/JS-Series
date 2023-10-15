@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <h2>Pic Directory</h2>
+    <div>
+        <ul style="list-style: none; display: flex;" id="images">
+            <li><img width="200px" id="pic1" src="https://images.pexels.com/photos/287237/pexels-photo-287237.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""/></li>
+            <li><img width="200px" id="pic2" src="https://images.pexels.com/photos/3845129/pexels-photo-3845129.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""/></li>
+            <li><img width="200px" id="pic3" src="https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""/></li>
+            <li><img width="200px" id="pic4" src="https://images.pexels.com/photos/2280547/pexels-photo-2280547.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""/></li>
+            <li><img width="200px" id="pic5" src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""/></li>
+            <li><img width="200px" id="pic6" src="https://images.pexels.com/photos/236380/pexels-photo-236380.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""/></li>
+        </ul>
+        <a id="myAnchor" href="https://w3schools.com/">Go to W3Schools.com</a>
+    </div>
+    <script>
+        // document.getElementById('pic1').onclick = function(){
+        //     alert("Pic 1 clicked")
+        // }
+        
+        //// insted of addEventListener we can use : attachEvent()
+        //// insted of addEventListener we can use : jQuery- on()
+
+        // document.getElementById('images').addEventListener('click', function(e){
+        //     console.log('clicked on the ul')
+        // }, false)
+
+        // document.getElementById('pic2').addEventListener('click', function(e){
+        //     console.log('clicked on the pic2')
+        //     e.stopPropagation()
+        // }, false)
+
+        // document.getElementById('pic5').addEventListener('click', function(e){
+        //     console.log('clicked on the pic5')
+        //     e.preventDefault()
+        //     e.stopPropagation()
+        // }, false)
+
+        // document.getElementById("myAnchor").addEventListener("click", function(event){
+        // event.preventDefault()
+        // alert("Was preventDefault() called: " + event.defaultPrevented);
+        // });
+
+        //// type, timestamp, defaultPrevented, target, toElement, srcElement, currentTarget, clientX, clientY, screenX, screenY
+
+        /*        
+        Event propagation are two types:
+        1: Event capturing : Parent to Child target : true
+        2: Event bubbling  : Child to parent target : false : this is happning by defult in eventListner 
+        for avoideing the event propagation we can use event.stopPropagation()
+        */
+
+        document.getElementById('images').addEventListener('click', function(e){
+            console.log(e.target.parentNode)
+            let removeElement = e.target.parentNode;
+            //removeElement.remove();
+            removeElement.parentNode.removeChild(removeElement);
+        }, false)
+    </script>
+</body>
+</html>
